@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanin Hany — AI Automation Engineer</title>
+<style>
+:root{
+  --bg:#07111f;
+  --bg2:#0b1628;
+  --card:rgba(16,31,52,.78);
+  --line:rgba(148,163,184,.16);
+  --text:#eef5ff;
+  --muted:#9fb0c7;
+  --purple:#8b5cf6;
+  --cyan:#22d3ee;
+  --mint:#34d399;
+  --pink:#f472b6;
+  --glow:rgba(139,92,246,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  color:var(--text);background:
+  radial-gradient(circle at 15% 10%,rgba(139,92,246,.20),transparent 28%),
+  radial-gradient(circle at 85% 18%,rgba(34,211,238,.14),transparent 25%),
+  linear-gradient(180deg,var(--bg),#050b15 75%);
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{
+  position:sticky;top:0;z-index:10;backdrop-filter:blur(18px);
+  background:rgba(7,17,31,.72);border-bottom:1px solid var(--line);
+}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.4px}.logo span{color:var(--cyan)}
+.navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px}
+.navlinks a:hover{color:white}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:12px;
+  border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700;
+}
+.btn.primary{
+  border:0;background:linear-gradient(135deg,var(--purple),#6d5dfc 55%,var(--cyan));
+  box-shadow:0 12px 35px var(--glow);
+}
+.hero{padding:105px 0 85px;position:relative;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;
+  border:1px solid rgba(52,211,153,.25);background:rgba(52,211,153,.08);color:#8ff1c8;font-size:13px;font-weight:700}
+.hero h1{font-size:clamp(46px,7vw,82px);line-height:.98;letter-spacing:-3px;margin:22px 0}
+.gradient{background:linear-gradient(90deg,#fff 15%,#c4b5fd 50%,#67e8f9 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:700px;color:var(--muted);font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.orbit{
+  position:absolute;width:430px;height:430px;border:1px solid rgba(139,92,246,.18);
+  border-radius:50%;right:-160px;top:60px;box-shadow:0 0 100px rgba(34,211,238,.08) inset;
+}
+.orbit:after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--cyan);left:46px;top:95px;box-shadow:0 0 30px var(--cyan)}
+.section{padding:86px 0}
+.section h2{font-size:36px;letter-spacing:-1.3px;margin:0 0 10px}
+.lead{color:var(--muted);max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{
+  background:linear-gradient(180deg,rgba(18,35,58,.82),rgba(10,22,38,.82));
+  border:1px solid var(--line);border-radius:20px;padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.18);
+}
+.card:hover{border-color:rgba(139,92,246,.45);transform:translateY(-3px);transition:.25s}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(135deg,rgba(139,92,246,.22),rgba(34,211,238,.12));font-size:21px}
+.card h3{margin:17px 0 7px}.card p{color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+.tag{font-size:12px;padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:#cbd5e1;background:rgba(255,255,255,.025)}
+.project{overflow:hidden;padding:0}
+.project-img{height:230px;background:#050b15;overflow:hidden;border-bottom:1px solid var(--line)}
+.project-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.workflow-visual{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
+  padding:25px;background:
+  radial-gradient(circle at 25% 35%,rgba(139,92,246,.20),transparent 32%),
+  radial-gradient(circle at 75% 65%,rgba(34,211,238,.14),transparent 30%),
+  #081322}
+.workflow-visual span{font-size:11px;font-weight:800;letter-spacing:.7px;padding:10px 12px;border-radius:10px;
+  border:1px solid rgba(139,92,246,.30);background:rgba(255,255,255,.045);color:#e2e8f0}
+.workflow-visual b{color:#67e8f9;font-size:20px}
+.project-body{padding:23px}
+.project-body h3{margin:0 0 8px;font-size:21px}
+.workflow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#a5f3fc;
+  padding:10px 12px;border-radius:10px;background:rgba(34,211,238,.06);border:1px solid rgba(34,211,238,.12);margin:15px 0}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.skill{padding:11px 14px;border-radius:12px;background:rgba(255,255,255,.045);border:1px solid var(--line);color:#dbeafe}
+.about{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:stretch}
+.statbox{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{padding:20px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.stat b{font-size:26px}.stat span{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.cta{
+  padding:45px;border-radius:26px;border:1px solid rgba(139,92,246,.3);
+  background:radial-gradient(circle at 15% 20%,rgba(139,92,246,.2),transparent 38%),rgba(15,27,46,.85);
+  text-align:center;
+}
+.cta h2{font-size:40px}.cta p{color:var(--muted);max-width:650px;margin:10px auto 25px}
+footer{padding:35px 0;color:#7f91aa;border-top:1px solid var(--line);font-size:13px}
+@media(max-width:850px){
+  .grid,.about{grid-template-columns:1fr}
+  .navlinks{display:none}
+  .hero{padding-top:75px}.hero h1{letter-spacing:-2px}
+}
+@media(max-width:560px){
+  .statbox{grid-template-columns:1fr}
+  .hero p{font-size:16px}
+  .section{padding:65px 0}
+  .project-img{height:200px}
+}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+  <a class="logo" href="#">Hanin<span>.</span></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
+  </div>
+  <a class="btn primary" href="#contact">Let's Connect</a>
+</div></nav>
+
+<header class="hero">
+  <div class="orbit"></div>
+  <div class="container">
+    <span class="eyebrow">⚡ AI AUTOMATION ENGINEER</span>
+    <h1>Turning repetitive work<br><span class="gradient">into smart workflows.</span></h1>
+    <p>I build practical automation systems with n8n, APIs, Webhooks, and business integrations — connecting tools, processing data, and automating everyday operations.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">View My Work →</a>
+      <a class="btn" href="#contact">Work With Me</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="section">
+<div class="container about">
+  <div>
+    <h2>About Me</h2>
+    <p class="lead">I'm an AI Automation Engineer focused on turning manual, repetitive processes into structured automated workflows. I work with n8n, REST APIs, Webhooks, Telegram, Gmail, and conditional logic to connect systems and move information automatically.</p>
+    <p class="lead">My Machine Learning background gives me a strong foundation for understanding AI and data-driven solutions, while my current focus is building useful automation that solves real business problems.</p>
+  </div>
+  <div class="statbox">
+    <div class="stat"><b>n8n</b><span>Workflow Automation</span></div>
+    <div class="stat"><b>APIs</b><span>System Integration</span></div>
+    <div class="stat"><b>Webhooks</b><span>Event-driven flows</span></div>
+    <div class="stat"><b>AI + ML</b><span>Technical foundation</span></div>
+  </div>
+</div>
+</section>
+
+<section id="services" class="section">
+<div class="container">
+  <h2>What I Automate</h2>
+  <p class="lead">Automation services focused on reducing manual steps and connecting the tools businesses already use.</p>
+  <div class="grid">
+    <div class="card"><div class="icon">⚙️</div><h3>Workflow Automation</h3><p>Designing structured n8n workflows that replace repetitive manual processes.</p></div>
+    <div class="card"><div class="icon">🔗</div><h3>API Integration</h3><p>Connecting REST APIs and external services to move and transform data automatically.</p></div>
+    <div class="card"><div class="icon">🎯</div><h3>Lead Automation</h3><p>Processing lead data and applying business rules to qualify and prioritize prospects.</p></div>
+    <div class="card"><div class="icon">🛒</div><h3>E-commerce Automation</h3><p>Automating order processing, admin alerts, and customer confirmations.</p></div>
+    <div class="card"><div class="icon">📩</div><h3>Notification Automation</h3><p>Sending automated updates through Gmail, Telegram, and connected communication tools.</p></div>
+    <div class="card"><div class="icon">🔄</div><h3>Business Process Automation</h3><p>Turning multi-step operations into repeatable, reliable workflows.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container">
+  <h2>Selected Automation Projects</h2>
+  <p class="lead">Practical n8n workflows built around real automation scenarios.</p>
+  <div class="grid">
+    <article class="card project">
+      <div class="project-img"><img src="lead_automation.png" alt="Lead Qualification and Priority Automation workflow"></div>
+      <div class="project-body">
+        <h3>Lead Qualification Automation</h3>
+        <p>Automatically processes lead information and classifies prospects into High Priority or Low Priority based on budget.</p>
+        <div class="workflow">Lead Data → Qualify → IF → Priority → Result</div>
+        <div class="tags"><span class="tag">n8n</span><span class="tag">IF Node</span><span class="tag">Edit Fields</span></div>
+      </div>
+    </article>
+
+    <article class="card project">
+      <div class="project-img"><img src="weather_automation.png" alt="Automated Daily Weather Updates workflow"></div>
+      <div class="project-body">
+        <h3>Daily Weather Automation</h3>
+        <p>Retrieves weather data from Open-Meteo, formats the result, then sends the update automatically through Telegram and Gmail.</p>
+        <div class="workflow">Schedule → HTTP Request → Format → Telegram + Gmail</div>
+        <div class="tags"><span class="tag">n8n</span><span class="tag">REST API</span><span class="tag">Telegram</span><span class="tag">Gmail</span></div>
+      </div>
+    </article>
+
+    <article class="card project">
+      <div class="project-img"><img src="ecommerce_automation.png" alt="E-commerce Order Notification Automation workflow"></div>
+      <div class="project-body">
+        <h3>E-commerce Order Automation</h3>
+        <p>Receives order data through a Webhook, formats the order, alerts the admin on Telegram, and sends confirmation by Gmail.</p>
+        <div class="workflow">Webhook → Format Order → Telegram + Gmail</div>
+        <div class="tags"><span class="tag">n8n</span><span class="tag">Webhook</span><span class="tag">Telegram</span><span class="tag">Gmail</span></div>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="skills" class="section">
+<div class="container">
+  <h2>Tech Stack</h2>
+  <p class="lead">The tools and foundations behind my automation work.</p>
+  <div class="skills">
+    <span class="skill">n8n</span><span class="skill">Workflow Design</span><span class="skill">REST APIs</span>
+    <span class="skill">Webhooks</span><span class="skill">HTTP Request</span><span class="skill">JSON</span>
+    <span class="skill">Telegram Bot API</span><span class="skill">Gmail</span><span class="skill">Python</span>
+    <span class="skill">Machine Learning</span><span class="skill">Git</span><span class="skill">GitHub</span><span class="skill">Linux</span>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="cta" id="contact">
+    <h2>Have a repetitive process?</h2>
+    <p>Let's turn it into an automated workflow that saves time, connects your tools, and keeps the process moving.</p>
+    <div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:haninhany352@gmail.com">Email Me →</a><a class="btn" href="https://www.linkedin.com/in/hanin-hany-32933a36b/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+  </div>
+  <p style="margin-top:18px;color:#9fb0c7;font-size:14px">01284052824 · haninhany352@gmail.com · <a href="https://www.linkedin.com/in/hanin-hany-32933a36b/" target="_blank" rel="noopener" style="color:#67e8f9">LinkedIn</a></p>
+</div>
+</section>
+
+<footer><div class="container">© 2026 Hanin Hany · AI Automation Engineer</div></footer>
+</body>
+</html>
