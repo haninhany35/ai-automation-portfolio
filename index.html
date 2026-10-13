@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hanin Hany — AI Automation Engineer</title>
+<title>Hanin Hany Mohamed | AI Automation Engineer</title>
+<meta name="description" content="Portfolio of Hanin Hany Mohamed, focused on n8n workflow automation, API integrations, Telegram bots, and practical AI and machine learning solutions.">
 <style>
 :root{
   --bg:#07111f;
@@ -112,11 +113,31 @@ footer{padding:35px 0;color:#7f91aa;border-top:1px solid var(--line);font-size:1
   .section{padding:65px 0}
   .project-img{height:200px}
 }
+
+/* Portfolio polish */
+.hero-name{margin:0 0 8px!important;color:#a5f3fc!important;font-size:clamp(18px,2.5vw,25px)!important;line-height:1.35;font-weight:900;letter-spacing:2.4px;text-shadow:0 0 22px rgba(34,211,238,.18)}
+.logo{font-size:21px;font-weight:900}
+.navlinks a:focus-visible,.btn:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+.card{height:100%}
+.project{display:flex;flex-direction:column}
+.project-body{display:flex;flex-direction:column;flex:1}
+.project-body .tags{margin-top:auto;padding-top:10px}
+.project-img.workflow-visual{min-height:190px;height:auto;gap:9px}
+.workflow-visual span{max-width:100%;text-align:center}
+@media(max-width:560px){
+ .hero-name{letter-spacing:1.5px;font-size:clamp(16px,4.5vw,20px)!important}
+ .hero h1{font-size:clamp(39px,12vw,58px)}
+ .workflow-visual{padding:16px 10px}
+ .workflow-visual span{font-size:9px;padding:8px}
+ .cta{padding:28px 18px}
+ .cta h2{font-size:30px}
+}
+
 </style>
 </head>
 <body>
 <nav><div class="container nav">
-  <a class="logo" href="#">Hanin<span>.</span></a>
+  <a class="logo" href="#" aria-label="Hanin Hany Mohamed home">Hanin Hany<span>.</span></a>
   <div class="navlinks">
     <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
   </div>
@@ -127,6 +148,7 @@ footer{padding:35px 0;color:#7f91aa;border-top:1px solid var(--line);font-size:1
   <div class="orbit"></div>
   <div class="container">
     <span class="eyebrow">⚡ AI AUTOMATION ENGINEER</span>
+    <p class="hero-name">HANIN HANY MOHAMED</p>
     <h1>Turning repetitive work<br><span class="gradient">into smart workflows.</span></h1>
     <p>I build practical automation systems with n8n, APIs, Webhooks, and business integrations — connecting tools, processing data, and automating everyday operations.</p>
     <div class="actions">
@@ -140,8 +162,8 @@ footer{padding:35px 0;color:#7f91aa;border-top:1px solid var(--line);font-size:1
 <div class="container about">
   <div>
     <h2>About Me</h2>
-    <p class="lead">I'm an AI Automation Engineer focused on turning manual, repetitive processes into structured automated workflows. I work with n8n, REST APIs, Webhooks, Telegram, Gmail, and conditional logic to connect systems and move information automatically.</p>
-    <p class="lead">My Machine Learning background gives me a strong foundation for understanding AI and data-driven solutions, while my current focus is building useful automation that solves real business problems.</p>
+    <p class="lead">I’m a Computer Science student focused on AI and practical workflow automation. I build n8n workflows that connect tools, process information, and automate repeatable tasks using APIs, Webhooks, Telegram, Gmail, and conditional logic.</p>
+    <p class="lead">Alongside automation, I have a foundation in Python and Machine Learning. My goal is to deliver clear, maintainable solutions that reduce manual work and make everyday processes easier to manage.</p>
   </div>
   <div class="statbox">
     <div class="stat"><b>n8n</b><span>Workflow Automation</span></div>
@@ -154,8 +176,8 @@ footer{padding:35px 0;color:#7f91aa;border-top:1px solid var(--line);font-size:1
 
 <section id="services" class="section">
 <div class="container">
-  <h2>What I Automate</h2>
-  <p class="lead">Automation services focused on reducing manual steps and connecting the tools businesses already use.</p>
+  <h2>What I Can Help With</h2>
+  <p class="lead">Practical services for individuals and small businesses that want to save time and reduce repetitive work.</p>
   <div class="grid">
     <div class="card"><div class="icon">⚙️</div><h3>Workflow Automation</h3><p>Designing structured n8n workflows that replace repetitive manual processes.</p></div>
     <div class="card"><div class="icon">🔗</div><h3>API Integration</h3><p>Connecting REST APIs and external services to move and transform data automatically.</p></div>
@@ -170,10 +192,10 @@ footer{padding:35px 0;color:#7f91aa;border-top:1px solid var(--line);font-size:1
 <section id="projects" class="section">
 <div class="container">
   <h2>Selected Automation Projects</h2>
-  <p class="lead">Practical n8n workflows built around real automation scenarios.</p>
+  <p class="lead">Selected workflow projects and practical automation scenarios built with n8n.</p>
   <div class="grid">
     <article class="card project">
-      <div class="project-img"><img src="lead_automation.png" alt="Lead Qualification and Priority Automation workflow"></div>
+      <div class="project-img workflow-visual" role="img" aria-label="Lead data flows through qualification and priority classification"><span>LEAD DATA</span><b>→</b><span>QUALIFY</span><b>→</b><span>PRIORITY</span></div>
       <div class="project-body">
         <h3>Lead Qualification Automation</h3>
         <p>Automatically processes lead information and classifies prospects into High Priority or Low Priority based on budget.</p>
@@ -183,7 +205,7 @@ footer{padding:35px 0;color:#7f91aa;border-top:1px solid var(--line);font-size:1
     </article>
 
     <article class="card project">
-      <div class="project-img"><img src="weather_automation.png" alt="Automated Daily Weather Updates workflow"></div>
+      <div class="project-img workflow-visual" role="img" aria-label="Scheduled weather API workflow sends updates"><span>SCHEDULE</span><b>→</b><span>WEATHER API</span><b>→</b><span>ALERTS</span></div>
       <div class="project-body">
         <h3>Daily Weather Automation</h3>
         <p>Retrieves weather data from Open-Meteo, formats the result, then sends the update automatically through Telegram and Gmail.</p>
@@ -193,12 +215,21 @@ footer{padding:35px 0;color:#7f91aa;border-top:1px solid var(--line);font-size:1
     </article>
 
     <article class="card project">
-      <div class="project-img"><img src="ecommerce_automation.png" alt="E-commerce Order Notification Automation workflow"></div>
+      <div class="project-img workflow-visual" role="img" aria-label="Order webhook triggers Telegram and email notifications"><span>WEBHOOK</span><b>→</b><span>ORDER DATA</span><b>→</b><span>NOTIFY</span></div>
       <div class="project-body">
         <h3>E-commerce Order Automation</h3>
         <p>Receives order data through a Webhook, formats the order, alerts the admin on Telegram, and sends confirmation by Gmail.</p>
         <div class="workflow">Webhook → Format Order → Telegram + Gmail</div>
         <div class="tags"><span class="tag">n8n</span><span class="tag">Webhook</span><span class="tag">Telegram</span><span class="tag">Gmail</span></div>
+      </div>
+    </article>
+    <article class="card project">
+      <div class="project-img workflow-visual" role="img" aria-label="Google Sheets question bank sends a random question to Telegram, followed by its answer"><span>GOOGLE SHEETS</span><b>→</b><span>RANDOM Q</span><b>→</b><span>TELEGRAM</span></div>
+      <div class="project-body">
+        <h3>Telegram Quiz Bot</h3>
+        <p>Reads questions and answers from Google Sheets, sends a random question to Telegram, then shares the answer after a configured delay.</p>
+        <div class="workflow">Google Sheets → Select Question → Telegram → Delayed Answer</div>
+        <div class="tags"><span class="tag">n8n</span><span class="tag">Google Sheets</span><span class="tag">Telegram Bot</span><span class="tag">Wait Node</span></div>
       </div>
     </article>
   </div>
